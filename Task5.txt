@@ -1,0 +1,39 @@
+The z-index is a CSS property that specifies the stack order of elements. When elements overlap, the element with the higher z-index value will appear on top of the element with the lower z-index value. The z-index only works on elements that have a position other than static (e.g., relative, absolute, fixed, or sticky).
+
+Key Points about z-index:
+Stacking Context: z-index creates a stacking context, meaning it controls how elements stack on top of one another within their parent container.
+Default z-index: The default z-index value is auto, which means the stacking order is based on the order in the HTML. Elements later in the HTML stack above those earlier in the code if they are positioned elements.
+Higher Value on Top: A higher z-index value means that the element will be in front (stacked on top) of elements with a lower z-index value.
+
+example:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index Example</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        .red-box { background-color: red; top: 50px; left: 50px; z-index: 1; }
+        .green-box { background-color: green; top: 70px; left: 70px; z-index: 2; }
+        .blue-box { background-color: blue; top: 90px; left: 90px; z-index: 3; }
+    </style>
+</head>
+<body>
+    <div class="box red-box"></div>
+    <div class="box green-box"></div>
+    <div class="box blue-box"></div>
+</body>
+</html>
+
+
+Explanation:
+Red Box: z-index: 1
+Green Box: z-index: 2 (appears on top of the red box)
+Blue Box: z-index: 3 (appears on top of both the red and green boxes)
+The z-index values determine the stacking order of the boxes.

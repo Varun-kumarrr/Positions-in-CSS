@@ -1,0 +1,17 @@
+1. Relative Positioning
+An element with position: relative is positioned relative to its normal position in the document flow.
+The element still occupies space in the normal flow, but its position can be shifted using the top, right, bottom, and left properties.
+If no top, right, bottom, or left properties are applied, the element remains in its original place.
+Key Points:
+
+The element's original space in the layout is preserved.
+Useful for making small adjustments while keeping the element within the flow.
+
+2. Absolute Positioning
+An element with position: absolute is positioned relative to its nearest positioned ancestor (an ancestor with position: relative, absolute, or fixed).
+If there is no positioned ancestor, the element is positioned relative to the <html> (root element).
+The element is removed from the normal document flow, meaning it does not reserve space and other elements behave as if it doesn't exist.
+Key Points:
+
+The element is completely independent of its original position in the document flow.
+Useful for placing elements in specific locations
